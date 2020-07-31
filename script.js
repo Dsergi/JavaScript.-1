@@ -84,9 +84,7 @@ function operation4(a, b) {
     return a + b;
     }       
 
-var arg1 = prompt("arg1 = " );
-var arg2 = prompt("arg2 = " );
-var operation = prompt("Что выполнить: сложение, вычитание, деление, умножение" );
+
 function mathOperation(arg1, arg2, operation){
     switch(operation){
         case 'сложение':
