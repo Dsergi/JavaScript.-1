@@ -106,3 +106,61 @@ cart = document.getElementById("cart");
 cart.classList.add("cart");
 
 displayText(cart,basket.basketText());
+
+/* 5.* Сделать так, чтобы товары в каталоге выводились при помощи JS:
+Создать массив товаров (сущность Product);
+При загрузке страницы на базе данного массива генерировать вывод из него. 
+HTML-код должен содержать только div id=”catalog” без вложенного кода. Весь вид каталога генерируется JS.*/
+
+function displayCatalog(products){          
+            
+    productBox = document.getElementById("catalog");
+    productBox.classList.add("catalog");
+    
+    var product = document.createElement("div");
+    product.classList.add("product");
+
+    var productName = document.createElement("div");
+    productName.classList.add("productName");
+    productName.classList.add("productHeadline");
+    
+    var productPrise = document.createElement("div");
+    productPrise.classList.add("productPrise");
+    productPrise.classList.add("productHeadline");
+    
+    productName.textContent = "Товар";
+    productPrise.textContent = "цена";
+    
+    productBox.appendChild(product);
+    product.appendChild(productName);    
+    product.appendChild(productPrise);
+        
+    for(var i = 0; i < products.length; i++){
+
+        var product = document.createElement("div");
+        product.classList.add("product");
+    
+        var productName = document.createElement("div");
+        productName.classList.add("productName");
+                
+        var productPrise = document.createElement("div");
+        productPrise.classList.add("productPrise");
+               
+        productName.textContent = products[i].name;
+        productPrise.textContent = products[i].price;        
+
+        productBox.appendChild(product);
+        product.appendChild(productName);
+        product.appendChild(productPrise);
+           
+    }
+    displayText(cart,basket.basketText());
+}
+
+var products = [
+    {name: 'товар1', price: 1000}, 
+    {name: 'товар2', price: 2000}, 
+    {name: 'товар3', price: 3000},
+];
+
+displayCatalog(products);
