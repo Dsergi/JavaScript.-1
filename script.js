@@ -104,7 +104,7 @@ basket.products = products;
 
 cart = document.getElementById("cart");
 cart.classList.add("cart");
-
+cart.style.backgroundColor = "gray"
 displayText(cart,basket.basketText());
 
 /* 5.* Сделать так, чтобы товары в каталоге выводились при помощи JS:
@@ -128,8 +128,8 @@ function displayCatalog(products){
     productPrise.classList.add("productPrise");
     productPrise.classList.add("productHeadline");
     
-    productName.textContent = "Товар";
-    productPrise.textContent = "цена";
+    productName.textContent = "Наименование Товара";
+    productPrise.textContent = "Цена";
     
     productBox.appendChild(product);
     product.appendChild(productName);    
