@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="template" style="display: none;">
+        <div class="product">
+            <div class="productName"></div>
+            <img class="productImg">
+            <button class="productButtonRem"></button>
+            <div class="count"></div>
+            <button class="productButtonAdd"></button>
+            <div class="productPrise"></div>
+            <div class="sum"></div>
+            <button class="productButtonDel"></button>
+        </div>
+                   
+    </div> 
+    
+        <div id="order">
+            <h3 class = "cart_h3"> Корзина </h3>
+            <button type="submit"  onClick="refreshPage()">Обновить корзину</button>
+            <div id="cart" class="cart">
+            
+            </div>
+        </div>
+        <div id="catalog">
+            <h3 class = "cart_h3"> Каталог </h3>
+            <button type="submit"  onClick="refreshPage()">Показать корзину</button>
+        </div>
+    
+    <div class="modal-overlay" id="modal-overlay">
+
+        <div id="modal" class="modal">
+            <div id="modal-img" class="modal-img">
+            </div>
+            <div class="button-Box">
+                <button class="class-button" id="left-button">&LT&LT&LT</button> 
+                <button class="class-button" id="right-button">&GT;&GT;&GT;</button>
+            </div>
+            <button class="class-button" id="close-button">закрыть</button>
+        </div>
+
+    </div>
+    </div>
+</body>
+</html>
